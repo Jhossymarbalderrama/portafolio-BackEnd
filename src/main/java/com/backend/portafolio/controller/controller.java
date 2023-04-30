@@ -39,7 +39,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 @RestController
 //@CrossOrigin(origins = "http://localhost:4200")
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "https://my-portafolio-7abab.web.app")
 @RequestMapping("/api")
 public class controller {
     
