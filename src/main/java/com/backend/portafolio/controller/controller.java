@@ -84,6 +84,11 @@ public class controller {
        return userSer.getUsuarios();
    } 
    
+   @GetMapping("/usuarios/listar/{id}")
+   public Usuario verUsuario(@PathVariable Long id){
+       return userSer.findUsuario(id);       
+   }
+   
    @PostMapping("/usuarios/alta")
    public Usuario createUsuario(@RequestBody Usuario user){      
        return userSer.saveUsuario(user);
@@ -92,6 +97,11 @@ public class controller {
    @DeleteMapping("/usuarios/baja/{id}")
    public void deleteUsuario(@PathVariable Long id){
        userSer.deleteUsuario(id);      
+   }
+   
+   @PutMapping("/usuarios/modificar")
+   public Usuario updateUsuario(@RequestBody Usuario user){     
+       return userSer.updateUsuario(user);       
    }
    
    //MODEL EXPERIENCIA

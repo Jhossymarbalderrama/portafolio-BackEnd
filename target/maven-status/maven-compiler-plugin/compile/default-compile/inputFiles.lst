@@ -16,6 +16,7 @@ E:\ArgPrograma\Modulo 8\Backend\portafolio\src\main\java\com\backend\portafolio\
 E:\ArgPrograma\Modulo 8\Backend\portafolio\src\main\java\com\backend\portafolio\model\Persona.java
 E:\ArgPrograma\Modulo 8\Backend\portafolio\src\main\java\com\backend\portafolio\service\IExperienciaService.java
 E:\ArgPrograma\Modulo 8\Backend\portafolio\src\main\java\com\backend\portafolio\service\ProyectoService.java
+E:\ArgPrograma\Modulo 8\Backend\portafolio\src\main\java\com\backend\portafolio\dto\AuthRequest.java
 E:\ArgPrograma\Modulo 8\Backend\portafolio\src\main\java\com\backend\portafolio\service\IProyectoService.java
 E:\ArgPrograma\Modulo 8\Backend\portafolio\src\main\java\com\backend\portafolio\model\HardSoftSkills.java
 E:\ArgPrograma\Modulo 8\Backend\portafolio\src\main\java\com\backend\portafolio\repository\HardSoftSkillsRepository.java

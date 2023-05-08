@@ -28,4 +28,5 @@ com\backend\portafolio\repository\EducacionRepository.class
 com\backend\portafolio\service\IExperienciaService.class
 com\backend\portafolio\model\Proyecto.class
 com\backend\portafolio\service\IProyectoService.class
+com\backend\portafolio\dto\AuthRequest.class
 com\backend\portafolio\service\IEducacionService.class
