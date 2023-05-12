@@ -23,10 +23,9 @@ import org.springframework.web.bind.annotation.RestController;
  * @author BlackJhossy
  */
 @RestController
-@CrossOrigin(origins = {"http://localhost:4200", "https://my-portafolio-7abab.web.app"})
+@CrossOrigin(origins = {"http://localhost:4200","https://my-portafolio-7abab.web.app"})
 @RequestMapping("/api")
 public class EducacionController {
-
     @Autowired
     private IEducacionService eduServ;
 
@@ -55,7 +54,7 @@ public class EducacionController {
      */
     @PostMapping("/educaciones/alta")
     public ResponseEntity<?> crearEducacion(@RequestBody Educacion edu) {
-        Educacion educacion = new Educacion();
+        Object educacion;
         
         try {
             if ("".equals(edu.getTitulo()) || edu.getTitulo() == null) {
@@ -110,7 +109,7 @@ public class EducacionController {
      */
     @PutMapping("/educaciones/modificar")
     public ResponseEntity<?> updatePersona(@RequestBody Educacion edu) {
-        Educacion uducacion = new Educacion();
+        Object uducacion;
         try {
             if (!eduServ.existById(edu.getId())) {
                 return new ResponseEntity(new Mensaje("No existe el numero de ID"), HttpStatus.NOT_FOUND);

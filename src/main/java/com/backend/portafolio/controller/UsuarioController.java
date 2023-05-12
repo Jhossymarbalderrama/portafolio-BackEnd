@@ -23,10 +23,9 @@ import org.springframework.web.bind.annotation.RestController;
  * @author BlackJhossy
  */
 @RestController
-@CrossOrigin(origins = {"http://localhost:4200", "https://my-portafolio-7abab.web.app"})
+@CrossOrigin(origins = {"http://localhost:4200","https://my-portafolio-7abab.web.app"})
 @RequestMapping("/api")
 public class UsuarioController {
-
     @Autowired
     private IUsuarioService userSer;
 
@@ -55,8 +54,8 @@ public class UsuarioController {
      */
     @GetMapping("/usuarios/listar/{id}")
     public ResponseEntity<?> verUsuario(@PathVariable("id") Long id) {
-        Usuario usuario = new Usuario();
-
+        Object usuario;
+        
         try {
             if (!userSer.existById(id)) {
                 return new ResponseEntity(new Mensaje("No existe el numero de ID"), HttpStatus.NOT_FOUND);
@@ -77,7 +76,7 @@ public class UsuarioController {
      */
     @PostMapping("/usuarios/alta")
     public ResponseEntity<?> createUsuario(@RequestBody Usuario user) {
-        Usuario usuario = new Usuario();
+        Object usuario;
 
         try {
             if (user.getUsuario() == null || "".equals(user.getUsuario())) {
@@ -123,7 +122,7 @@ public class UsuarioController {
      */
     @PutMapping("/usuarios/modificar")
     public ResponseEntity<Object> updateUsuario(@RequestBody Usuario user) {
-        Usuario usuario =  new Usuario();
+        Object usuario;
         try {
             if (!userSer.existById(user.getId())) {
                 return new ResponseEntity(new Mensaje("No existe el numero de ID"), HttpStatus.NOT_FOUND);

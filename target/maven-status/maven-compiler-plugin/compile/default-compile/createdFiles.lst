@@ -20,7 +20,6 @@ com\backend\portafolio\repository\ExperienciaRepository.class
 com\backend\portafolio\controller\HabilidadController.class
 com\backend\portafolio\service\HardSoftSkillsService.class
 com\backend\portafolio\service\ExperienciaService.class
-com\backend\portafolio\controller\controller.class
 com\backend\portafolio\controller\PersonaController.class
 com\backend\portafolio\service\UsuarioService.class
 com\backend\portafolio\service\IUsuarioService.class
@@ -36,5 +35,4 @@ com\backend\portafolio\repository\EducacionRepository.class
 com\backend\portafolio\service\IExperienciaService.class
 com\backend\portafolio\model\Proyecto.class
 com\backend\portafolio\service\IProyectoService.class
-com\backend\portafolio\dto\AuthRequest.class
 com\backend\portafolio\service\IEducacionService.class

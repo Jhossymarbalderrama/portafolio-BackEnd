@@ -23,10 +23,9 @@ import org.springframework.web.bind.annotation.RestController;
  * @author BlackJhossy
  */
 @RestController
-@CrossOrigin(origins = {"http://localhost:4200", "https://my-portafolio-7abab.web.app"})
+@CrossOrigin(origins = {"http://localhost:4200","https://my-portafolio-7abab.web.app"})
 @RequestMapping("/api")
 public class HabilidadController {
-
     @Autowired
     private IHardSoftSkillsService hssServ;
 
@@ -55,13 +54,13 @@ public class HabilidadController {
      */
     @PostMapping("/hss/alta")
     public ResponseEntity<?> crearHardSoftSkill(@RequestBody HardSoftSkills hss) {
-        HardSoftSkills nuevoHss = new HardSoftSkills();
+        Object nuevoHss;
 
         try {
-            if (hss.getTitulo() == "" || hss.getTitulo() == null) {
+            if ("".equals(hss.getTitulo()) || hss.getTitulo() == null) {
                 return new ResponseEntity(new Mensaje("Titulo Obligatorio"), HttpStatus.BAD_REQUEST);
             }
-            if (hss.getDetalle() == "" || hss.getDetalle() == null) {
+            if ("".equals(hss.getDetalle()) || hss.getDetalle() == null) {
                 return new ResponseEntity(new Mensaje("Detalle Obligatorio"), HttpStatus.BAD_REQUEST);
             }
             if (hss.getPorcentaje() == null) {
@@ -103,7 +102,7 @@ public class HabilidadController {
      */
     @PutMapping("/hss/modificar")
     public ResponseEntity<?> updateHardSoftSkill(@RequestBody HardSoftSkills hss) {
-        HardSoftSkills nuevoHss = new HardSoftSkills();
+        Object nuevoHss;
         try {
             if (!hssServ.existById(hss.getId())) {
                 return new ResponseEntity(new Mensaje("No existe el numero de ID"), HttpStatus.NOT_FOUND);

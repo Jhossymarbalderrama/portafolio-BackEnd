@@ -23,10 +23,9 @@ import org.springframework.web.bind.annotation.RestController;
  * @author BlackJhossy
  */
 @RestController
-@CrossOrigin(origins = {"http://localhost:4200", "https://my-portafolio-7abab.web.app"})
+@CrossOrigin(origins = {"http://localhost:4200","https://my-portafolio-7abab.web.app"})
 @RequestMapping("/api")
 public class PersonaController {
-
     @Autowired
     private IPersonaService persoServ;
 
@@ -55,7 +54,7 @@ public class PersonaController {
      */
     @GetMapping("/personas/listar/{id}")
     public ResponseEntity<?> verPersona(@PathVariable("id") Long id) {
-        Persona persona = new Persona();
+        Object persona;
 
         try {
             if (!persoServ.existById(id)) {
@@ -77,7 +76,7 @@ public class PersonaController {
      */
     @PostMapping("/personas/alta")
     public ResponseEntity<?> createPersona(@RequestBody Persona per) {
-        Persona persona = new Persona();
+        Object persona;
 
         try {
             if ("".equals(per.getNombre()) || per.getNombre() == null) {
@@ -141,7 +140,7 @@ public class PersonaController {
      */
     @PutMapping("/personas/modificar")
     public ResponseEntity<?> updatePersona(@RequestBody Persona persona) {
-        Persona NuevaPersona = new Persona();
+        Object NuevaPersona;
         
         try {
             if (!persoServ.existById(persona.getId())) {

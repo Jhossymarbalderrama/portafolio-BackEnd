@@ -23,10 +23,9 @@ import org.springframework.web.bind.annotation.RestController;
  * @author BlackJhossy
  */
 @RestController
-@CrossOrigin(origins = {"http://localhost:4200", "https://my-portafolio-7abab.web.app"})
+@CrossOrigin(origins = {"http://localhost:4200","https://my-portafolio-7abab.web.app"})
 @RequestMapping("/api")
 public class ExperienciaController {
-
     @Autowired
     private IExperienciaService expServ;
 
@@ -55,7 +54,7 @@ public class ExperienciaController {
      */
     @PostMapping("/experiencias/alta")
     public ResponseEntity<?> createExperiencia(@RequestBody Experiencia exp) {
-        Experiencia experiencia = new Experiencia();
+        Object experiencia;
 
         try {
             if ("".equals(exp.getNombre_empresa()) || exp.getNombre_empresa() == null) {
@@ -107,7 +106,7 @@ public class ExperienciaController {
      */
     @PutMapping("/experiencias/modificar")
     public ResponseEntity<?> updatePersona(@RequestBody Experiencia exp) {
-        Experiencia experiencia = new Experiencia();
+        Object experiencia;
         
         try {
             if (!expServ.existById(exp.getId())) {

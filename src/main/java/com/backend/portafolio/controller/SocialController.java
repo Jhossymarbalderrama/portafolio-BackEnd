@@ -23,10 +23,9 @@ import org.springframework.web.bind.annotation.RestController;
  * @author BlackJhossy
  */
 @RestController
-@CrossOrigin(origins = {"http://localhost:4200", "https://my-portafolio-7abab.web.app"})
+@CrossOrigin(origins = {"http://localhost:4200","https://my-portafolio-7abab.web.app"})
 @RequestMapping("/api")
 public class SocialController {
-
     @Autowired
     private IRedesSocialesService redesServ;
 
@@ -56,13 +55,13 @@ public class SocialController {
      */
     @PostMapping("/redessociales/alta")
     public ResponseEntity<?> crearRedSocial(@RequestBody RedesSociales redSocial) {
-        RedesSociales social = new RedesSociales();
+        Object social;
 
         try {
-            if (redSocial.getNombre() == "" || redSocial.getNombre() == null) {
+            if ("".equals(redSocial.getNombre()) || redSocial.getNombre() == null) {
                 return new ResponseEntity(new Mensaje("Nombre Obligatorio"), HttpStatus.BAD_REQUEST);
             }
-            if (redSocial.getLink() == "" || redSocial.getLink() == null) {
+            if ("".equals(redSocial.getLink()) || redSocial.getLink() == null) {
                 return new ResponseEntity(new Mensaje("Link Obligatorio"), HttpStatus.BAD_REQUEST);
             }
 
@@ -102,17 +101,17 @@ public class SocialController {
      */
     @PutMapping("/redessociales/modificar")
     public ResponseEntity<?> updateRedSocial(@RequestBody RedesSociales redSocial) {
-        RedesSociales social = new RedesSociales();
+        Object social;
 
         try {
             if (!redesServ.existById(redSocial.getId())) {
                 return new ResponseEntity(new Mensaje("No existe el numero de ID"), HttpStatus.NOT_FOUND);
             }
 
-            if (redSocial.getNombre() == "" || redSocial.getNombre() == null) {
+            if ("".equals(redSocial.getNombre()) || redSocial.getNombre() == null) {
                 return new ResponseEntity(new Mensaje("Nombre vacio"), HttpStatus.BAD_REQUEST);
             }
-            if (redSocial.getLink() == "" || redSocial.getLink() == null) {
+            if ("".equals(redSocial.getLink()) || redSocial.getLink() == null) {
                 return new ResponseEntity(new Mensaje("Link vacio"), HttpStatus.BAD_REQUEST);
             }
             social = redesServ.updateRedesSociales(redSocial);

@@ -23,10 +23,9 @@ import org.springframework.web.bind.annotation.RestController;
  * @author BlackJhossy
  */
 @RestController
-@CrossOrigin(origins = {"http://localhost:4200", "https://my-portafolio-7abab.web.app"})
+@CrossOrigin(origins = {"http://localhost:4200","https://my-portafolio-7abab.web.app"})
 @RequestMapping("/api")
 public class ProyectoController {
-
     @Autowired
     private IProyectoService proyectServ;
 
@@ -56,7 +55,7 @@ public class ProyectoController {
      */
     @PostMapping("/proyectos/alta")
     public ResponseEntity<?> crearProyecto(@RequestBody Proyecto proyect) {
-        Proyecto proyecto = new Proyecto();
+        Object proyecto;
 
         try {
             if ("".equals(proyect.getNombre_proyecto()) || proyect.getNombre_proyecto() == null) {
@@ -105,7 +104,7 @@ public class ProyectoController {
      */
     @PutMapping("/proyectos/modificar")
     public ResponseEntity<?> updatePersona(@RequestBody Proyecto proyect) {
-        Proyecto proyecto = new Proyecto();
+        Object proyecto;
         
         try {
             if (!proyectServ.existById(proyect.getId())) {
