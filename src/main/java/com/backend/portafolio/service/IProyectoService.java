@@ -17,4 +17,6 @@ public interface IProyectoService {
     public void deleteProyecto (Long id);
 
     public Proyecto updateProyecto (Proyecto proyect);
+    
+    public boolean existById(Long id);
 }

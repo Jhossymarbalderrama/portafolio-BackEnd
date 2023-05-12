@@ -21,7 +21,12 @@ public class ExperienciaService implements IExperienciaService{
     public List<Experiencia> getExperiencias() {
         return expRepo.findAll();
     }
-
+    
+    @Override
+    public Experiencia findExperiencia(Long id) {
+        return expRepo.findById(id).orElse(null);
+    }
+    
     @Override
     public Experiencia saveExperiencia(Experiencia user) {
         return expRepo.save(user);
@@ -33,12 +38,12 @@ public class ExperienciaService implements IExperienciaService{
     }
 
     @Override
-    public Experiencia findExperiencia(Long id) {
-        return expRepo.findById(id).orElse(null);
-    }
-    
-    @Override
     public Experiencia updateExperiencia(Experiencia exp){
         return expRepo.save(exp);
     }
+    
+    @Override
+    public boolean existById(Long id){
+        return expRepo.existsById(id);
+    }    
 }

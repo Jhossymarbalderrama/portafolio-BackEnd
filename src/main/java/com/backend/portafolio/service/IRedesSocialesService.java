@@ -17,4 +17,6 @@ public interface IRedesSocialesService {
     public void deleteRedesSociales (Long id);
     
     public RedesSociales updateRedesSociales (RedesSociales user);
+    
+    public boolean existById(Long id);
 }

@@ -42,4 +42,8 @@ public class RedesSocialesService implements IRedesSocialesService{
         return redesRepo.save(redes);
     }
     
+    @Override
+    public boolean existById(Long id){
+        return redesRepo.existsById(id);
+    } 
 }

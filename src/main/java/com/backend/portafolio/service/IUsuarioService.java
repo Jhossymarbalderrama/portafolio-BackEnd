@@ -19,4 +19,6 @@ public interface IUsuarioService {
     public void deleteUsuario (Long id);
     
     public Usuario updateUsuario (Usuario user);
+    
+    public boolean existById(Long id);
 }

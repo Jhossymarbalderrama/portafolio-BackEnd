@@ -41,4 +41,9 @@ public class EducacionService implements IEducacionService{
     public Educacion updateEducacion(Educacion edu){
         return eduRep.save(edu);
     }
+    
+    @Override
+    public boolean existById(Long id){
+        return eduRep.existsById(id);
+    }
 }

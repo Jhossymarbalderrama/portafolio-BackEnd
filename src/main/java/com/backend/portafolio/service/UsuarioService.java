@@ -23,6 +23,11 @@ public class UsuarioService implements IUsuarioService{
     }
 
     @Override
+    public Usuario findUsuario(Long id) {
+        return userRepo.findById(id).orElse(null);
+    }
+    
+    @Override
     public Usuario saveUsuario(Usuario user) {
         return userRepo.save(user);
     }
@@ -31,14 +36,14 @@ public class UsuarioService implements IUsuarioService{
     public void deleteUsuario(Long id) {
         userRepo.deleteById(id);
     }
-
-    @Override
-    public Usuario findUsuario(Long id) {
-        return userRepo.findById(id).orElse(null);
-    }
     
     @Override
     public Usuario updateUsuario(Usuario user){
         return userRepo.save(user);
+    }
+    
+    @Override
+    public boolean existById(Long id){
+        return userRepo.existsById(id);
     }
 }

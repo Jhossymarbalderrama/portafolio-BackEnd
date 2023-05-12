@@ -8,6 +8,7 @@ import java.util.List;
  * @author BlackJhossy
  */
 public interface IPersonaService {
+    
     public List<Persona> getPersonas();
     
     public Persona findPersona (Long id);    
@@ -17,4 +18,6 @@ public interface IPersonaService {
     public void deletePersona (Long id);
     
     public Persona updatePersona(Persona persona);
+    
+    public boolean existById(Long id);
 }

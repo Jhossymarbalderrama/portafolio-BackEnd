@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Interface.java to edit this template
- */
 package com.backend.portafolio.service;
 
 import com.backend.portafolio.model.Educacion;
@@ -21,4 +17,6 @@ public interface IEducacionService {
     public void deleteEducacion (Long id);
         
     public Educacion updateEducacion(Educacion edu);
+    
+    public boolean existById(Long id);
 }

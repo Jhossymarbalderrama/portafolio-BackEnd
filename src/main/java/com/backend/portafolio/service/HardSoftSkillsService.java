@@ -41,4 +41,9 @@ public class HardSoftSkillsService implements IHardSoftSkillsService{
     public HardSoftSkills updateHSS(HardSoftSkills hss){
         return hssRepo.save(hss);
     }
+    
+    @Override
+    public boolean existById(Long id){
+        return hssRepo.existsById(id);
+    } 
 }

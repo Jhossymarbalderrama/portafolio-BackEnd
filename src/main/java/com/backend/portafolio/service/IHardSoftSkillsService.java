@@ -17,4 +17,6 @@ public interface IHardSoftSkillsService {
     public void deleteHSS (Long id);
     
     public HardSoftSkills updateHSS (HardSoftSkills hss);
+    
+    public boolean existById(Long id);
 }

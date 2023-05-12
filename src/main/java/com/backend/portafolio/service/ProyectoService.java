@@ -1,4 +1,3 @@
-
 package com.backend.portafolio.service;
 
 import com.backend.portafolio.model.Proyecto;
@@ -13,7 +12,7 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class ProyectoService implements IProyectoService {
-    
+
     @Autowired
     public ProyectoRepository proyectRepo;
 
@@ -36,9 +35,14 @@ public class ProyectoService implements IProyectoService {
     public Proyecto findProyecto(Long id) {
         return proyectRepo.findById(id).orElse(null);
     }
-    
+
     @Override
-    public Proyecto updateProyecto(Proyecto proyect){
+    public Proyecto updateProyecto(Proyecto proyect) {
         return proyectRepo.save(proyect);
+    }
+
+    @Override
+    public boolean existById(Long id) {
+        return proyectRepo.existsById(id);
     }
 }

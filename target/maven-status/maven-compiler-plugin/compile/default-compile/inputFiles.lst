@@ -1,5 +1,7 @@
 E:\ArgPrograma\Modulo 8\Backend\portafolio\src\main\java\com\backend\portafolio\controller\controller.java
 E:\ArgPrograma\Modulo 8\Backend\portafolio\src\main\java\com\backend\portafolio\service\ExperienciaService.java
+E:\ArgPrograma\Modulo 8\Backend\portafolio\src\main\java\com\backend\portafolio\controller\ProyectoController.java
+E:\ArgPrograma\Modulo 8\Backend\portafolio\src\main\java\com\backend\portafolio\controller\SocialController.java
 E:\ArgPrograma\Modulo 8\Backend\portafolio\src\main\java\com\backend\portafolio\PortafolioApplication.java
 E:\ArgPrograma\Modulo 8\Backend\portafolio\src\main\java\com\backend\portafolio\service\IHardSoftSkillsService.java
 E:\ArgPrograma\Modulo 8\Backend\portafolio\src\main\java\com\backend\portafolio\model\Educacion.java
@@ -7,14 +9,18 @@ E:\ArgPrograma\Modulo 8\Backend\portafolio\src\main\java\com\backend\portafolio\
 E:\ArgPrograma\Modulo 8\Backend\portafolio\src\main\java\com\backend\portafolio\service\PersonaService.java
 E:\ArgPrograma\Modulo 8\Backend\portafolio\src\main\java\com\backend\portafolio\service\IUsuarioService.java
 E:\ArgPrograma\Modulo 8\Backend\portafolio\src\main\java\com\backend\portafolio\model\Experiencia.java
+E:\ArgPrograma\Modulo 8\Backend\portafolio\src\main\java\com\backend\portafolio\controller\PersonaController.java
 E:\ArgPrograma\Modulo 8\Backend\portafolio\src\main\java\com\backend\portafolio\service\IRedesSocialesService.java
+E:\ArgPrograma\Modulo 8\Backend\portafolio\src\main\java\com\backend\portafolio\controller\UsuarioController.java
 E:\ArgPrograma\Modulo 8\Backend\portafolio\src\main\java\com\backend\portafolio\model\RedesSociales.java
+E:\ArgPrograma\Modulo 8\Backend\portafolio\src\main\java\com\backend\portafolio\security\Controller\Mensaje.java
 E:\ArgPrograma\Modulo 8\Backend\portafolio\src\main\java\com\backend\portafolio\service\EducacionService.java
 E:\ArgPrograma\Modulo 8\Backend\portafolio\src\main\java\com\backend\portafolio\repository\ExperienciaRepository.java
 E:\ArgPrograma\Modulo 8\Backend\portafolio\src\main\java\com\backend\portafolio\WebConfig.java
 E:\ArgPrograma\Modulo 8\Backend\portafolio\src\main\java\com\backend\portafolio\service\HardSoftSkillsService.java
 E:\ArgPrograma\Modulo 8\Backend\portafolio\src\main\java\com\backend\portafolio\model\Persona.java
 E:\ArgPrograma\Modulo 8\Backend\portafolio\src\main\java\com\backend\portafolio\service\IExperienciaService.java
+E:\ArgPrograma\Modulo 8\Backend\portafolio\src\main\java\com\backend\portafolio\controller\ExperienciaController.java
 E:\ArgPrograma\Modulo 8\Backend\portafolio\src\main\java\com\backend\portafolio\service\ProyectoService.java
 E:\ArgPrograma\Modulo 8\Backend\portafolio\src\main\java\com\backend\portafolio\dto\AuthRequest.java
 E:\ArgPrograma\Modulo 8\Backend\portafolio\src\main\java\com\backend\portafolio\service\IProyectoService.java
@@ -26,7 +32,9 @@ E:\ArgPrograma\Modulo 8\Backend\portafolio\src\main\java\com\backend\portafolio\
 E:\ArgPrograma\Modulo 8\Backend\portafolio\src\main\java\com\backend\portafolio\service\IPersonaService.java
 E:\ArgPrograma\Modulo 8\Backend\portafolio\src\main\java\com\backend\portafolio\model\Proyecto.java
 E:\ArgPrograma\Modulo 8\Backend\portafolio\src\main\java\com\backend\portafolio\repository\UsuarioRepository.java
+E:\ArgPrograma\Modulo 8\Backend\portafolio\src\main\java\com\backend\portafolio\controller\HabilidadController.java
 E:\ArgPrograma\Modulo 8\Backend\portafolio\src\main\java\com\backend\portafolio\model\Usuario.java
+E:\ArgPrograma\Modulo 8\Backend\portafolio\src\main\java\com\backend\portafolio\controller\EducacionController.java
 E:\ArgPrograma\Modulo 8\Backend\portafolio\src\main\java\com\backend\portafolio\repository\ProyectoRepository.java
 E:\ArgPrograma\Modulo 8\Backend\portafolio\src\main\java\com\backend\portafolio\service\IEducacionService.java
 E:\ArgPrograma\Modulo 8\Backend\portafolio\src\main\java\com\backend\portafolio\service\RedesSocialesService.java
